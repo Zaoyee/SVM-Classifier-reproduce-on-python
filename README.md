@@ -4,7 +4,7 @@
 
 This project will reproduce the support vector machine classifier example figures on Hastie et al’s book. The reproduced 2 figures(4 plots) are chosen from the book [Elements of Statistical Learning by Hastie et al](http://statweb.stanford.edu/~tibs/ElemStatLearn/) . 
 
-<img src="/Users/zaoyichi/Desktop/Screen Shot 2019-09-20 at 4.33.51 PM.png" alt="Screen Shot 2019-09-20 at 4.33.51 PM" style="zoom:40%;" />
+[Figure 12.2](https://github.com/Zaoyee/SVM-Classifier-reproduce-on-python/blob/master/reproduce-target-figure-svm.png)
 
 > Figure source: Hastie, et al. Elements of Statistical Learning, Figure 12.2
 
