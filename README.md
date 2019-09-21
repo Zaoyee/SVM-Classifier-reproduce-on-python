@@ -18,12 +18,12 @@ In short, the algorithm is trying to learn the paramater slope `W` and intercept
 
 ```pseudocode
 Inputs: data X, target y, penalty C
-		Random assign value for slope W and intercept \beta
-		repeat
-				for all {x_i, y_i}, fo 
-						Optimize W and \beta
-				end for
-    until no changes in slope W or other criteria met
+	Random assign value for slope W and intercept \beta
+	repeat
+		for all {x_i, y_i}, fo 
+			Optimize W and \beta
+		end for
+	until no changes in slope W or other criteria met
 ```
 
 The number showed in the figure can be computed by cross-validation method. In basic, I will divide all observations into multiple folds. In each iteration, I keep a fold as test set, and others to be the training data. This process will run based on each fold. Then, I can compute the average test error and training error.  The Bayes error can be directly computed by the equation given in the description of the dataset.
