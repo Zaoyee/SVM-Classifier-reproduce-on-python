@@ -7,7 +7,8 @@ run
 ```
  pip install -r requirements.txt
 ```
-The code and figure can be runned simply run `make` in your terminal if you have Makefile properly installed.
+
+simply run `make` in your terminal if you have Makefile properly installed.
 
 
 ----
