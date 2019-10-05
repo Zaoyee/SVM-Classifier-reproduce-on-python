@@ -7,10 +7,10 @@ run
 ```
  pip install -r requirements.txt
 ```
-
----
-
 The code and figure can be runned simply run `make` in your terminal if you have Makefile properly installed.
+
+
+----
 
 This project will reproduce the support vector machine classifier example figures on Hastie et al’s book. The reproduced 2 figures(4 plots) are chosen from the book [Elements of Statistical Learning by Hastie et al](http://statweb.stanford.edu/~tibs/ElemStatLearn/) . 
 
