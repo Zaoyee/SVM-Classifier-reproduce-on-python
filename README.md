@@ -10,6 +10,7 @@ run
 
 simply run `make` in your terminal if you have Makefile properly installed.
 
+* Here is the link to the proposal of this [project]().
 
 ----
 
