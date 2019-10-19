@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 
 # data_total = pd.read_csv('./ESL-data/ESLmixture.csv').iloc[:, 1:]
 #
@@ -13,6 +12,12 @@ import pandas as pd
 # C = 0.01
 
 class SVMClassifer():
+    """
+    The class that do everything about the SVM
+    inputs: train_data, (n,p)
+            label_data, (n,)
+            penalty, int scalar
+    """
     def __init__(self, train_data, label, penalty):
         self.train_data = train_data
         self.label = label.copy()
@@ -22,26 +27,41 @@ class SVMClassifer():
         self.prediction = self.predict()
 
     def predict(self):
+        """As the name, it does prediction and return it"""
         prediction = np.multiply(self.alpha_vec, self.label[:,np.newaxis]).T
-        prediction = np.dot(prediction, np.inner(self.train_data, self.train_data)) + self.intercept
-        self.prediction = np.sign(prediction)
+        pred = np.dot(prediction, np.inner(self.train_data, self.train_data)) + self.intercept
+        self.prediction = np.sign(pred)
+        return(self.prediction)
 
     def decision_bound(self, test_data):
+        """Find out the decision boundary over here,
+        the return is the boundary label either 1 or 0"""
         pred = self.w * test_data[:,0] - self.intercept
         self.ret_label = np.zeros((test_data.shape[0], 1))
         self.ret_label[test_data[:,1] > pred] = 1
         self.ret_label[test_data[:,1] <= pred] = 0
         return (self.ret_label)
 
-    def find_new_index(self, i,num_data):
+    def find_new_index(self, i, num_data):
+        """The sub function called in the SVM_SMO function.
+        To find another index that is different to index i"""
         j = np.random.randint(0, num_data, 1)
         if (i == j):
             return (self.find_new_index(i,num_data))
         else:
             return (j)
+        
+    def train_error(self):
+        """compute the train error and return it"""
+        self.prediction = self.predict()
+        pred = self.prediction.reshape(-1)
+        self.error = np.sum(pred != self.label) / self.train_data.shape[0]
+        return(self.error)
 
     # main function for svm-smo
     def SVM_SMO(self, train_data, label, C):
+        """The main function of this class, do all computation and update the 
+        $alpha$"""
         num_data, num_feature = train_data.shape
         iter_i = 0
         intercept = 0

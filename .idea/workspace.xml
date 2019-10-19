@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81b9e775-95eb-4dd5-a5f7-21f554c91864" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libsvm-smo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ElemstanLearn-svm.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ElemstanLearn-svm.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ElemstanLearn-svm.py" beforeDir="false" afterPath="$PROJECT_DIR$/ElemstanLearn-svm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figs/out1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figs/out1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svm-smo.py" beforeDir="false" afterPath="$PROJECT_DIR$/svmSmo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/out2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figs/out2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svmSmo.py" beforeDir="false" afterPath="$PROJECT_DIR$/svmSmo.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,27 +15,24 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/SVM_Classifier_reproduce_on_python$test_svm.coverage" NAME="test-svm Coverage Results" MODIFIED="1571274067826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/SVM_Classifier_reproduce_on_python$svm.coverage" NAME="svm Coverage Results" MODIFIED="1571447076051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SVM_Classifier_reproduce_on_python$svm.coverage" NAME="svm Coverage Results" MODIFIED="1571463968694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/svmSmo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="114" column="24" lean-forward="true" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="353">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElemstanLearn-svm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="-1647">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -70,10 +63,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="838" />
+    <option name="width" value="1920" />
+    <option name="height" value="1018" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -181,23 +174,25 @@
       <workItem from="1571262952332" duration="7047000" />
       <workItem from="1571272883015" duration="6364000" />
       <workItem from="1571338438532" duration="796000" />
-      <workItem from="1571425590481" duration="19085000" />
+      <workItem from="1571425590481" duration="19722000" />
+      <workItem from="1571463907297" duration="190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33292000" />
+    <option name="totallyTimeSpent" value="34119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1018" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12526652" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12633263" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.18702702" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.35567567" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35567567" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -207,12 +202,12 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32885906" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3481081" />
-      <window_info anchor="right" x="0" y="0" width="430" height="818" id="Documentation" sideWeight="0.5015432" side_tool="true" weight="0.31716418" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.49845678" visible="true" weight="0.12953092" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.4972973" visible="true" weight="0.12953092" />
       <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" x="0" y="0" width="430" height="818" id="Documentation" order="5" sideWeight="0.5027027" side_tool="true" visible="true" weight="0.12953092" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,9 +217,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ElemstanLearn-svm.py</url>
-          <line>84</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/svmSmo.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -271,23 +266,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/svmSmo.py">
+    <entry file="file://$PROJECT_DIR$/ElemstanLearn-svm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="114" column="24" lean-forward="true" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
+        <state relative-caret-position="-1647">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ElemstanLearn-svm.py">
+    <entry file="file://$PROJECT_DIR$/svmSmo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="353">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
