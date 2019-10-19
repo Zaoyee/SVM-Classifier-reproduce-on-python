@@ -34,10 +34,13 @@ def svc_smo_scrath(penalty):
     model = ss.SVMClassifer(train_data=data_total.iloc[:,[0,1]],
                             label=data_total['label'],
                             penalty=penalty)
-    alpha_vec = model.alpha_vec
-    w = model.w
-    intercept = model.intercept
-    return(model, alpha_vec, w, intercept)
+    return(model)
+
+def abline(ax, slope, intercept, type):
+    """Plot a line from slope and intercept"""
+    x_vals = np.array(ax.get_xlim())
+    y_vals = intercept + slope * x_vals
+    plt.plot(x_vals, y_vals, type, c='k')
 
 def plot_svc(model, ax=None, mode='package'):
     if ax is None:
@@ -81,11 +84,16 @@ def plot_svc(model, ax=None, mode='package'):
         ax.scatter(x="X1", y='X2', c='label', data=gd, cmap=cmap, s=0.1)
 
         alphas = model.alpha_vec
-        support_index = np.where((alphas > 0) & (alphas < model.penalty))
+        support_index = np.where((alphas > 0) & (alphas < model.penalty))[0]
         for i in support_index:
             ax.scatter(x=model.train_data.iloc[i,0], y=model.train_data.iloc[i,1],
                        c='black', linewidth=2)
+            
+        abline(ax, model.w, -model.intercept, '-')
+        abline(ax, model.w, -model.intercept+model.margin, '-')
+        abline(ax, model.w, -model.intercept-model.margin, '-')
 
+ 
     ax.contour(PX1, PX2, prob, levels=[.5],
                colors='purple', linestyles='--', alpha=0.9)
     ax.set_yticklabels([])
@@ -96,20 +104,20 @@ def plot_svc(model, ax=None, mode='package'):
                 xy=(0.2, 0.), xycoords="axes fraction",
                 bbox=dict(boxstyle='round', fc='w'), size=12)
 
-# plt.figure(figsize=(8,8))
-# model1 = svc_model(1e4)
-# colors = [(0.1500, 0.4667, 0.7059, 0.7),
-#           (1.000, 0.6, 0.002, 0.5)]
-# cmap = ListedColormap(colors)
-# plt.scatter(x="X1", y="X2", c="label", data=data_total, cmap=cmap, linewidth=2)
-# plot_svc(model1,mode='package')
-# plt.xlabel('C = 10000', fontsize=13)
-# plt.savefig('./Figs/out1.png')
+plt.figure(figsize=(8,8))
+model1 = svc_model(1e4)
+colors = [(0.1500, 0.4667, 0.7059, 0.7),
+          (1.000, 0.6, 0.002, 0.5)]
+cmap = ListedColormap(colors)
+plt.scatter(x="X1", y="X2", c="label", data=data_total, cmap=cmap, linewidth=2)
+plot_svc(model1,mode='package')
+plt.xlabel('C = 10000', fontsize=13)
+plt.savefig('./Figs/out1.png')
 
 
 # This part is working on the algorithm coded from the scratch
 plt.figure(figsize=(8,8))
-model2, alpha_vec, w, intercept = svc_smo_scrath(1e-2)
+model2 = svc_smo_scrath(1e-2)
 colors = [(0.1500, 0.4667, 0.7059, 0.7),
           (1.000, 0.6, 0.002, 0.5)]
 cmap = ListedColormap(colors)

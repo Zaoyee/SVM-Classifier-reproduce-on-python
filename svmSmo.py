@@ -18,7 +18,7 @@ class SVMClassifer():
         self.label = label.copy()
         self.label[label==0] = -1
         self.penalty = penalty
-        self.alpha_vec, self.w, self.intercept = self.SVM_SMO(self.train_data, self.label, self.penalty)
+        self.alpha_vec, self.w, self.intercept, self.margin = self.SVM_SMO(self.train_data, self.label, self.penalty)
         self.prediction = self.predict()
 
     def predict(self):
@@ -27,10 +27,10 @@ class SVMClassifer():
         self.prediction = np.sign(prediction)
 
     def decision_bound(self, test_data):
-        pred = self.w * test_data[:,0] + self.intercept
+        pred = self.w * test_data[:,0] - self.intercept
         self.ret_label = np.zeros((test_data.shape[0], 1))
         self.ret_label[test_data[:,1] > pred] = 1
-        self.ret_label[test_data[:,1] <= pred] = -1
+        self.ret_label[test_data[:,1] <= pred] = 0
         return (self.ret_label)
 
     def find_new_index(self, i,num_data):
@@ -50,15 +50,15 @@ class SVMClassifer():
         while iter_i <= iter_num:
             alpha_changed = 0
             for i in range(num_data):
-                gX_i = (np.inner((alpha_vec.reshape(-1) * label),
+                gX_i = float(np.inner((alpha_vec.reshape(-1) * label),
                                 (np.dot(train_data, train_data.iloc[i, :].T)))) + intercept
-                E_i = gX_i - (label[i])
+                E_i = gX_i - float(label[i])
                 if (((label[i] * E_i < -1e-3) and (alpha_vec[i] < C))
                         or ((label[i] * E_i > 1e-3) and (alpha_vec[i] > 0))):
                     j = int(self.find_new_index(i,num_data))
-                    gX_j = (np.inner((alpha_vec.reshape(-1) * label),
+                    gX_j = float(np.inner((alpha_vec.reshape(-1) * label),
                                     (np.dot(train_data, train_data.iloc[j, :].T)))) + intercept
-                    E_j = gX_j - (label[j])
+                    E_j = gX_j - float(label[j])
                     alpha_old_i = alpha_vec[i].copy()
                     alpha_old_j = alpha_vec[j].copy()
 
@@ -83,7 +83,7 @@ class SVMClassifer():
                         alpha_new_j = L
 
                     alpha_vec[j] = alpha_new_j
-                    if np.abs((alpha_new_j - alpha_old_j)) < 1e-6:
+                    if np.abs(float(alpha_new_j - alpha_old_j)) < 1e-4:
                         continue
                     alpha_new_i = alpha_old_i + label[i] * label[j] * (alpha_old_j - alpha_new_j)
 
@@ -110,10 +110,10 @@ class SVMClassifer():
         W = np.dot(np.multiply(alpha_vec, label[:,np.newaxis]).T, train_data)
         W = W[0]
         w = -W[0]/W[1]
-        print(intercept)
+        margin = 1 / np.sqrt(np.sum(W ** 2))
+        margin = np.sqrt(1 + w ** 2) * margin
         intercept = intercept/W[1]
-        print(intercept)
-        return(alpha_vec, w, intercept)
+        return(alpha_vec, w, intercept, margin)
 
 # alpha_vec, intercept = SVM_SMO(train_data,label,C)
 # W = np.dot(np.multiply(alpha_vec, label[:,np.newaxis]).T, train_data)
