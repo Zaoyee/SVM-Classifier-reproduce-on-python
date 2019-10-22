@@ -1,4 +1,4 @@
 Figs/out2.png : ElemstanLearn-svm.py
-	pip3 install -r requirement.txt	
+	pip install -r requirements.txt	
 	python ElemstanLearn-svm.py
 	
