@@ -2,15 +2,24 @@
 
 ## Support Vector Machine Classifier on Mixture Example
 
-The possible packages need to need to be intalled beforehand.
-run
+The possible packages need to be intalled beforehand.
+
+Make sure you have python 3.x installed in your computer. If not, here is the link of [python](https://www.python.org)
+
+Conda environment is recommended but not force required.
+
+run following command in terminal
 ```
  pip install -r requirements.txt
 ```
-
+Then
 simply run `make` in your terminal if you have Makefile properly installed.
 
-* Here is the link to the proposal of this [project](https://github.com/Zaoyee/SVM-Classifier-reproduce-on-python/blob/master/pdf-documents/zaoyichi-project1-proposal.pdf).
+The reproduced figures are already inside of the `./Figs/`.
+
+In order to check the results, you can type `rm -f ./Figs/out*.png` to remove the cloned figures and redo `make` to generate the figures.
+
+* Here is the link to the description of this [project](https://github.com/Zaoyee/SVM-Classifier-reproduce-on-python/blob/master/pdf-documents/zaoyichi-project1-proposal.pdf).
 
 ----
 
