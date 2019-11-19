@@ -25,7 +25,7 @@ In order to check the results, you can type `rm -f ./Figs/out*.png` to remove th
 
 This project will reproduce the support vector machine classifier example figures on Hastie et al’s book. The reproduced 2 figures(4 plots) are chosen from the book [Elements of Statistical Learning by Hastie et al](http://statweb.stanford.edu/~tibs/ElemStatLearn/) . 
 
-[Figure 12.2](https://github.com/Zaoyee/SVM-Classifier-reproduce-on-python/blob/master/reproduce-target-figure-svm.png)
+![Figure 12.2](https://github.com/Zaoyee/SVM-Classifier-reproduce-on-python/blob/master/Figs/reproduce-target-figure-svm.png "Figure 12.2")
 
 > Figure source: Hastie, et al. Elements of Statistical Learning, Figure 12.2
 
